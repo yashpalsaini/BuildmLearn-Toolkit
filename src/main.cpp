@@ -129,6 +129,11 @@
 ///
 /// This module contains all classes related to Quiz template.
 ///
+/// \defgroup template-sample Sample template
+/// \brief Sample template classes.
+///
+/// This module contains all classes related to Sample template.
+///
 /// \defgroup template-flashcards Flashcards template
 /// \brief Flashcards template classes.
 ///

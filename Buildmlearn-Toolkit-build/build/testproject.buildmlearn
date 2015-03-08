@@ -1,0 +1,10 @@
+<buildmlearn_application type="QuizTemplate">
+  <author>
+    <name>yashpalsaini</name>
+    <email></email>
+  </author>
+  <title>testquiz</title>
+  <description></description>
+  <version>1</version>
+  <data/>
+</buildmlearn_application>

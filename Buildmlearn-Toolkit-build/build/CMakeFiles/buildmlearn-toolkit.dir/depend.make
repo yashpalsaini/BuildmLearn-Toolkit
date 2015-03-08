@@ -884,6 +884,7 @@ CMakeFiles/buildmlearn-toolkit.dir/src/core/templatefactory.cpp.obj: ../../src/t
 CMakeFiles/buildmlearn-toolkit.dir/src/core/templatefactory.cpp.obj: ../../src/templates/learnspellings/learnspellingsentrypoint.h
 CMakeFiles/buildmlearn-toolkit.dir/src/core/templatefactory.cpp.obj: ../../src/templates/mlearning/basicmlearningentrypoint.h
 CMakeFiles/buildmlearn-toolkit.dir/src/core/templatefactory.cpp.obj: ../../src/templates/quiz/quizentrypoint.h
+CMakeFiles/buildmlearn-toolkit.dir/src/core/templatefactory.cpp.obj: ../../src/templates/sample/sampleentrypoint.h
 CMakeFiles/buildmlearn-toolkit.dir/src/core/templatefactory.cpp.obj: C:/Qt/Qt5.4.1/5.4/mingw491_32/include/QtCore/QDateTime
 CMakeFiles/buildmlearn-toolkit.dir/src/core/templatefactory.cpp.obj: C:/Qt/Qt5.4.1/5.4/mingw491_32/include/QtCore/QFile
 CMakeFiles/buildmlearn-toolkit.dir/src/core/templatefactory.cpp.obj: C:/Qt/Qt5.4.1/5.4/mingw491_32/include/QtCore/QFlags

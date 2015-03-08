@@ -49,7 +49,7 @@
 #define APP_URL_ISSUES_NEW  "https://github.com/BuildmLearn/BuildmLearn-Toolkit/issues/new"
 #define APP_URL_DOWNLOADS   "http://buildmlearn.org/download"
 #define APP_VERSION         "2.0.4"
-#define APP_REVISION        "79bcdb4"
+#define APP_REVISION        "fefbc25"
 #define APP_USERAGENT       QString("BuildmLearn Toolkit/2.0.4 (http://buildmlearn.org/) on Windows-6.2")
 
 #define EXIT_STATUS_NOT_STARTED         -2

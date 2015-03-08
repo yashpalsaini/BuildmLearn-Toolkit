@@ -38,6 +38,7 @@
 #include "miscellaneous/settings.h"
 #include "miscellaneous/application.h"
 #include "templates/quiz/quizentrypoint.h"
+#include "templates/sample/sampleentrypoint.h"
 #include "templates/flashcard/flashcardentrypoint.h"
 #include "templates/mlearning/basicmlearningentrypoint.h"
 #include "templates/learnspellings/learnspellingsentrypoint.h"
@@ -310,6 +311,9 @@ void TemplateFactory::setupTemplates() {
 
   TemplateEntryPoint *quiz_entry = new QuizEntryPoint(this);
   m_availableTemplates.insert(quiz_entry->typeIndentifier(), quiz_entry);
+
+  TemplateEntryPoint *sample_entry = new SampleEntryPoint(this);
+  m_availableTemplates.insert(sample_entry->typeIndentifier(), sample_entry);
 
   TemplateEntryPoint *learnspellings_entry = new LearnSpellingsEntryPoint(this);
   m_availableTemplates.insert(learnspellings_entry->typeIndentifier(), learnspellings_entry);
