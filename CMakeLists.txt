@@ -139,7 +139,7 @@ if(APPLE)
 endif(APPLE)
 
 # Options declaration.
-option(USE_QT_5 "Use Qt 5 for building" OFF)
+option(USE_QT_5 "Use Qt 5 for building" ON)
 option(BUNDLE_ICON_THEMES "Equip installation with custom icon themes" ON)
 option(INSTALL_ALL_LANGUAGES "Install all available localizations" ON)
 option(DISABLE_STORE "Disable BuildmLearn Store features" OFF)
@@ -427,6 +427,13 @@ set(APP_SOURCES
   src/templates/quiz/quizsimulator.cpp
   src/templates/quiz/quizquestion.cpp
   src/templates/quiz/quizitem.cpp
+  
+  src/templates/sample/sampleentrypoint.cpp
+  src/templates/sample/samplecore.cpp
+  src/templates/sample/sampleeditor.cpp
+  src/templates/sample/samplesimulator.cpp
+  src/templates/sample/samplequestion.cpp
+  src/templates/sample/sampleitem.cpp
 
   src/templates/flashcard/flashcardentrypoint.cpp
   src/templates/flashcard/flashcardcore.cpp
@@ -498,6 +505,12 @@ set(APP_HEADERS
   src/templates/quiz/quizeditor.h
   src/templates/quiz/quizsimulator.h
   src/templates/quiz/quizitem.h
+  
+   src/templates/sample/sampleentrypoint.h
+  src/templates/sample/samplecore.h
+  src/templates/sample/sampleeditor.h
+  src/templates/sample/samplesimulator.h
+  src/templates/sample/sampleitem.h
 
   src/templates/flashcard/flashcardentrypoint.h
   src/templates/flashcard/flashcardcore.h
@@ -530,6 +543,11 @@ set(APP_FORMS
   src/templates/quiz/quizeditor.ui
   src/templates/quiz/quizsimulator.ui
   src/templates/quiz/quizitem.ui
+  
+  src/templates/sample/sampleeditor.ui
+  src/templates/sample/samplesimulator.ui
+  src/templates/sample/sampleitem.ui
+
 
   src/templates/flashcard/flashcardeditor.ui
   src/templates/flashcard/flashcardsimulator.ui
