@@ -1,0 +1,165 @@
+<ui version="4.0" >
+ <class>Form</class>
+ <widget class="QWidget" name="Form" >
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>393</width>
+    <height>473</height>
+   </rect>
+  </property>
+  <property name="windowTitle" >
+   <string>Form</string>
+  </property>
+  <widget class="QGroupBox" name="groupBox" >
+   <property name="geometry" >
+    <rect>
+     <x>0</x>
+     <y>340</y>
+     <width>381</width>
+     <height>121</height>
+    </rect>
+   </property>
+   <property name="title" >
+    <string/>
+   </property>
+   <widget class="QWidget" name="layoutWidget" >
+    <property name="geometry" >
+     <rect>
+      <x>20</x>
+      <y>90</y>
+      <width>117</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" >
+     <item>
+      <widget class="QToolButton" name="toolButton_4" >
+       <property name="text" >
+        <string>Speed</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QSlider" name="horizontalSlider_3" >
+       <property name="orientation" >
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="layoutWidget" >
+    <property name="geometry" >
+     <rect>
+      <x>20</x>
+      <y>10</y>
+      <width>351</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" >
+     <item>
+      <widget class="QToolButton" name="toolButton_2" >
+       <property name="text" >
+        <string>Play</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QToolButton" name="toolButton" >
+       <property name="text" >
+        <string>Pause</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QSlider" name="horizontalSlider_4" >
+       <property name="orientation" >
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="layoutWidget" >
+    <property name="geometry" >
+     <rect>
+      <x>20</x>
+      <y>50</y>
+      <width>117</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" >
+     <item>
+      <widget class="QToolButton" name="toolButton_3" >
+       <property name="text" >
+        <string>Volume</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QSlider" name="horizontalSlider_2" >
+       <property name="orientation" >
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="groupBox_2" >
+   <property name="geometry" >
+    <rect>
+     <x>20</x>
+     <y>10</y>
+     <width>361</width>
+     <height>291</height>
+    </rect>
+   </property>
+   <property name="title" >
+    <string>Enter Text</string>
+   </property>
+   <widget class="QTextEdit" name="m_txtStudenPassage" >
+    <property name="geometry" >
+     <rect>
+      <x>10</x>
+      <y>20</y>
+      <width>341</width>
+      <height>261</height>
+     </rect>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QPushButton" name="m_btnPassageSubmit" >
+   <property name="geometry" >
+    <rect>
+     <x>110</x>
+     <y>310</y>
+     <width>75</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text" >
+    <string>Submit </string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="m_btnMoveNext" >
+   <property name="geometry" >
+    <rect>
+     <x>200</x>
+     <y>310</y>
+     <width>75</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text" >
+    <string>Next</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

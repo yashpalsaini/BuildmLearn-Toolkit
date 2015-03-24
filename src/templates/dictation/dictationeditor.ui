@@ -1,0 +1,165 @@
+<ui version="4.0" >
+ <class>Form</class>
+ <widget class="QWidget" name="Form" >
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>612</width>
+    <height>446</height>
+   </rect>
+  </property>
+  <property name="windowTitle" >
+   <string>Form</string>
+  </property>
+  <widget class="QGroupBox" name="m_groupPassageEditor" >
+   <property name="geometry" >
+    <rect>
+     <x>10</x>
+     <y>20</y>
+     <width>321</width>
+     <height>301</height>
+    </rect>
+   </property>
+   <property name="title" >
+    <string/>
+   </property>
+   <widget class="QTextEdit" name="m_textPassage" >
+    <property name="geometry" >
+     <rect>
+      <x>80</x>
+      <y>10</y>
+      <width>231</width>
+      <height>241</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="m_btnPassageAdd" >
+    <property name="geometry" >
+     <rect>
+      <x>150</x>
+      <y>270</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text" >
+     <string>Add</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label" >
+    <property name="geometry" >
+     <rect>
+      <x>20</x>
+      <y>40</y>
+      <width>46</width>
+      <height>221</height>
+     </rect>
+    </property>
+    <property name="text" >
+     <string>Passage </string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="groupBox_3" >
+   <property name="geometry" >
+    <rect>
+     <x>0</x>
+     <y>340</y>
+     <width>331</width>
+     <height>88</height>
+    </rect>
+   </property>
+   <property name="title" >
+    <string>Test metadata</string>
+   </property>
+   <layout class="QGridLayout" >
+    <item row="0" column="0" >
+     <widget class="QLabel" name="label_3" >
+      <property name="text" >
+       <string>Author</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1" >
+     <widget class="LineEditWithStatus" native="1" name="m_txtAuthor" />
+    </item>
+    <item row="1" column="0" >
+     <widget class="QLabel" name="label_4" >
+      <property name="text" >
+       <string>Test name</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="1" >
+     <widget class="LineEditWithStatus" native="1" name="m_txtName" />
+    </item>
+   </layout>
+  </widget>
+  <widget class="QGroupBox" name="groupBox_2" >
+   <property name="geometry" >
+    <rect>
+     <x>350</x>
+     <y>10</y>
+     <width>251</width>
+     <height>421</height>
+    </rect>
+   </property>
+   <property name="title" >
+    <string>Passage</string>
+   </property>
+   <widget class="QTextEdit" name="m_listPassage" >
+    <property name="geometry" >
+     <rect>
+      <x>10</x>
+      <y>20</y>
+      <width>231</width>
+      <height>341</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QWidget" name="layoutWidget" >
+    <property name="geometry" >
+     <rect>
+      <x>30</x>
+      <y>380</y>
+      <width>196</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" >
+     <item>
+      <widget class="QToolButton" name="m_btnPassageRemove" >
+       <property name="text" >
+        <string>Remove </string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer>
+       <property name="orientation" >
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" >
+        <size>
+         <width>101</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>LineEditWithStatus</class>
+   <extends>QWidget</extends>
+   <header>lineeditwithstatus.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
