@@ -12384,14 +12384,12 @@ CMakeFiles/buildmlearn-toolkit.dir/src/templates/sample/samplecore.cpp.obj
  C:/Qt/Qt5.4.1/5.4/mingw491_32/include/QtWidgets/QAction
  C:/Qt/Qt5.4.1/5.4/mingw491_32/include/QtWidgets/QApplication
  C:/Qt/Qt5.4.1/5.4/mingw491_32/include/QtWidgets/QButtonGroup
- C:/Qt/Qt5.4.1/5.4/mingw491_32/include/QtWidgets/QFormLayout
  C:/Qt/Qt5.4.1/5.4/mingw491_32/include/QtWidgets/QFrame
  C:/Qt/Qt5.4.1/5.4/mingw491_32/include/QtWidgets/QGridLayout
  C:/Qt/Qt5.4.1/5.4/mingw491_32/include/QtWidgets/QGroupBox
  C:/Qt/Qt5.4.1/5.4/mingw491_32/include/QtWidgets/QHBoxLayout
  C:/Qt/Qt5.4.1/5.4/mingw491_32/include/QtWidgets/QHeaderView
  C:/Qt/Qt5.4.1/5.4/mingw491_32/include/QtWidgets/QLabel
- C:/Qt/Qt5.4.1/5.4/mingw491_32/include/QtWidgets/QLayout
  C:/Qt/Qt5.4.1/5.4/mingw491_32/include/QtWidgets/QLineEdit
  C:/Qt/Qt5.4.1/5.4/mingw491_32/include/QtWidgets/QListWidget
  C:/Qt/Qt5.4.1/5.4/mingw491_32/include/QtWidgets/QMenu
@@ -12415,7 +12413,6 @@ CMakeFiles/buildmlearn-toolkit.dir/src/templates/sample/samplecore.cpp.obj
  C:/Qt/Qt5.4.1/5.4/mingw491_32/include/QtWidgets/qboxlayout.h
  C:/Qt/Qt5.4.1/5.4/mingw491_32/include/QtWidgets/qbuttongroup.h
  C:/Qt/Qt5.4.1/5.4/mingw491_32/include/QtWidgets/qdesktopwidget.h
- C:/Qt/Qt5.4.1/5.4/mingw491_32/include/QtWidgets/qformlayout.h
  C:/Qt/Qt5.4.1/5.4/mingw491_32/include/QtWidgets/qframe.h
  C:/Qt/Qt5.4.1/5.4/mingw491_32/include/QtWidgets/qgridlayout.h
  C:/Qt/Qt5.4.1/5.4/mingw491_32/include/QtWidgets/qgroupbox.h
@@ -12621,13 +12618,10 @@ CMakeFiles/buildmlearn-toolkit.dir/src/templates/sample/sampleeditor.cpp.obj
  C:/Qt/Qt5.4.1/5.4/mingw491_32/include/QtWidgets/QAction
  C:/Qt/Qt5.4.1/5.4/mingw491_32/include/QtWidgets/QApplication
  C:/Qt/Qt5.4.1/5.4/mingw491_32/include/QtWidgets/QButtonGroup
- C:/Qt/Qt5.4.1/5.4/mingw491_32/include/QtWidgets/QFormLayout
  C:/Qt/Qt5.4.1/5.4/mingw491_32/include/QtWidgets/QGridLayout
  C:/Qt/Qt5.4.1/5.4/mingw491_32/include/QtWidgets/QGroupBox
- C:/Qt/Qt5.4.1/5.4/mingw491_32/include/QtWidgets/QHBoxLayout
  C:/Qt/Qt5.4.1/5.4/mingw491_32/include/QtWidgets/QHeaderView
  C:/Qt/Qt5.4.1/5.4/mingw491_32/include/QtWidgets/QLabel
- C:/Qt/Qt5.4.1/5.4/mingw491_32/include/QtWidgets/QLayout
  C:/Qt/Qt5.4.1/5.4/mingw491_32/include/QtWidgets/QLineEdit
  C:/Qt/Qt5.4.1/5.4/mingw491_32/include/QtWidgets/QListWidget
  C:/Qt/Qt5.4.1/5.4/mingw491_32/include/QtWidgets/QMenu
@@ -12649,7 +12643,6 @@ CMakeFiles/buildmlearn-toolkit.dir/src/templates/sample/sampleeditor.cpp.obj
  C:/Qt/Qt5.4.1/5.4/mingw491_32/include/QtWidgets/qboxlayout.h
  C:/Qt/Qt5.4.1/5.4/mingw491_32/include/QtWidgets/qbuttongroup.h
  C:/Qt/Qt5.4.1/5.4/mingw491_32/include/QtWidgets/qdesktopwidget.h
- C:/Qt/Qt5.4.1/5.4/mingw491_32/include/QtWidgets/qformlayout.h
  C:/Qt/Qt5.4.1/5.4/mingw491_32/include/QtWidgets/qframe.h
  C:/Qt/Qt5.4.1/5.4/mingw491_32/include/QtWidgets/qgridlayout.h
  C:/Qt/Qt5.4.1/5.4/mingw491_32/include/QtWidgets/qgroupbox.h
@@ -12818,14 +12811,12 @@ CMakeFiles/buildmlearn-toolkit.dir/src/templates/sample/sampleentrypoint.cpp.obj
  C:/Qt/Qt5.4.1/5.4/mingw491_32/include/QtWidgets/QAction
  C:/Qt/Qt5.4.1/5.4/mingw491_32/include/QtWidgets/QApplication
  C:/Qt/Qt5.4.1/5.4/mingw491_32/include/QtWidgets/QButtonGroup
- C:/Qt/Qt5.4.1/5.4/mingw491_32/include/QtWidgets/QFormLayout
  C:/Qt/Qt5.4.1/5.4/mingw491_32/include/QtWidgets/QFrame
  C:/Qt/Qt5.4.1/5.4/mingw491_32/include/QtWidgets/QGridLayout
  C:/Qt/Qt5.4.1/5.4/mingw491_32/include/QtWidgets/QGroupBox
  C:/Qt/Qt5.4.1/5.4/mingw491_32/include/QtWidgets/QHBoxLayout
  C:/Qt/Qt5.4.1/5.4/mingw491_32/include/QtWidgets/QHeaderView
  C:/Qt/Qt5.4.1/5.4/mingw491_32/include/QtWidgets/QLabel
- C:/Qt/Qt5.4.1/5.4/mingw491_32/include/QtWidgets/QLayout
  C:/Qt/Qt5.4.1/5.4/mingw491_32/include/QtWidgets/QLineEdit
  C:/Qt/Qt5.4.1/5.4/mingw491_32/include/QtWidgets/QListWidget
  C:/Qt/Qt5.4.1/5.4/mingw491_32/include/QtWidgets/QPushButton
@@ -12847,7 +12838,6 @@ CMakeFiles/buildmlearn-toolkit.dir/src/templates/sample/sampleentrypoint.cpp.obj
  C:/Qt/Qt5.4.1/5.4/mingw491_32/include/QtWidgets/qboxlayout.h
  C:/Qt/Qt5.4.1/5.4/mingw491_32/include/QtWidgets/qbuttongroup.h
  C:/Qt/Qt5.4.1/5.4/mingw491_32/include/QtWidgets/qdesktopwidget.h
- C:/Qt/Qt5.4.1/5.4/mingw491_32/include/QtWidgets/qformlayout.h
  C:/Qt/Qt5.4.1/5.4/mingw491_32/include/QtWidgets/qframe.h
  C:/Qt/Qt5.4.1/5.4/mingw491_32/include/QtWidgets/qgridlayout.h
  C:/Qt/Qt5.4.1/5.4/mingw491_32/include/QtWidgets/qgroupbox.h
@@ -12995,13 +12985,12 @@ CMakeFiles/buildmlearn-toolkit.dir/src/templates/sample/sampleitem.cpp.obj
  C:/Qt/Qt5.4.1/5.4/mingw491_32/include/QtWidgets/QApplication
  C:/Qt/Qt5.4.1/5.4/mingw491_32/include/QtWidgets/QButtonGroup
  C:/Qt/Qt5.4.1/5.4/mingw491_32/include/QtWidgets/QFrame
+ C:/Qt/Qt5.4.1/5.4/mingw491_32/include/QtWidgets/QGridLayout
  C:/Qt/Qt5.4.1/5.4/mingw491_32/include/QtWidgets/QHBoxLayout
  C:/Qt/Qt5.4.1/5.4/mingw491_32/include/QtWidgets/QHeaderView
  C:/Qt/Qt5.4.1/5.4/mingw491_32/include/QtWidgets/QLabel
  C:/Qt/Qt5.4.1/5.4/mingw491_32/include/QtWidgets/QPushButton
- C:/Qt/Qt5.4.1/5.4/mingw491_32/include/QtWidgets/QRadioButton
  C:/Qt/Qt5.4.1/5.4/mingw491_32/include/QtWidgets/QSpacerItem
- C:/Qt/Qt5.4.1/5.4/mingw491_32/include/QtWidgets/QVBoxLayout
  C:/Qt/Qt5.4.1/5.4/mingw491_32/include/QtWidgets/QWidget
  C:/Qt/Qt5.4.1/5.4/mingw491_32/include/QtWidgets/qabstractbutton.h
  C:/Qt/Qt5.4.1/5.4/mingw491_32/include/QtWidgets/qabstractitemdelegate.h
@@ -13022,7 +13011,6 @@ CMakeFiles/buildmlearn-toolkit.dir/src/templates/sample/sampleitem.cpp.obj
  C:/Qt/Qt5.4.1/5.4/mingw491_32/include/QtWidgets/qlayout.h
  C:/Qt/Qt5.4.1/5.4/mingw491_32/include/QtWidgets/qlayoutitem.h
  C:/Qt/Qt5.4.1/5.4/mingw491_32/include/QtWidgets/qpushbutton.h
- C:/Qt/Qt5.4.1/5.4/mingw491_32/include/QtWidgets/qradiobutton.h
  C:/Qt/Qt5.4.1/5.4/mingw491_32/include/QtWidgets/qrubberband.h
  C:/Qt/Qt5.4.1/5.4/mingw491_32/include/QtWidgets/qsizepolicy.h
  C:/Qt/Qt5.4.1/5.4/mingw491_32/include/QtWidgets/qslider.h
@@ -13229,14 +13217,12 @@ CMakeFiles/buildmlearn-toolkit.dir/src/templates/sample/samplesimulator.cpp.obj
  C:/Qt/Qt5.4.1/5.4/mingw491_32/include/QtWidgets/QAction
  C:/Qt/Qt5.4.1/5.4/mingw491_32/include/QtWidgets/QApplication
  C:/Qt/Qt5.4.1/5.4/mingw491_32/include/QtWidgets/QButtonGroup
- C:/Qt/Qt5.4.1/5.4/mingw491_32/include/QtWidgets/QFormLayout
  C:/Qt/Qt5.4.1/5.4/mingw491_32/include/QtWidgets/QFrame
  C:/Qt/Qt5.4.1/5.4/mingw491_32/include/QtWidgets/QGridLayout
  C:/Qt/Qt5.4.1/5.4/mingw491_32/include/QtWidgets/QGroupBox
  C:/Qt/Qt5.4.1/5.4/mingw491_32/include/QtWidgets/QHBoxLayout
  C:/Qt/Qt5.4.1/5.4/mingw491_32/include/QtWidgets/QHeaderView
  C:/Qt/Qt5.4.1/5.4/mingw491_32/include/QtWidgets/QLabel
- C:/Qt/Qt5.4.1/5.4/mingw491_32/include/QtWidgets/QLayout
  C:/Qt/Qt5.4.1/5.4/mingw491_32/include/QtWidgets/QLineEdit
  C:/Qt/Qt5.4.1/5.4/mingw491_32/include/QtWidgets/QListWidget
  C:/Qt/Qt5.4.1/5.4/mingw491_32/include/QtWidgets/QMessageBox
@@ -13261,7 +13247,6 @@ CMakeFiles/buildmlearn-toolkit.dir/src/templates/sample/samplesimulator.cpp.obj
  C:/Qt/Qt5.4.1/5.4/mingw491_32/include/QtWidgets/qbuttongroup.h
  C:/Qt/Qt5.4.1/5.4/mingw491_32/include/QtWidgets/qdesktopwidget.h
  C:/Qt/Qt5.4.1/5.4/mingw491_32/include/QtWidgets/qdialog.h
- C:/Qt/Qt5.4.1/5.4/mingw491_32/include/QtWidgets/qformlayout.h
  C:/Qt/Qt5.4.1/5.4/mingw491_32/include/QtWidgets/qframe.h
  C:/Qt/Qt5.4.1/5.4/mingw491_32/include/QtWidgets/qgridlayout.h
  C:/Qt/Qt5.4.1/5.4/mingw491_32/include/QtWidgets/qgroupbox.h

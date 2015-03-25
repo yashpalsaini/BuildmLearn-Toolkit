@@ -49,12 +49,7 @@ class SampleItem : public QWidget {
 
   public:
     /// \brief Enum containing possible states for widget for the question.
-    enum State {
-      Unanswered,
-      AnsweredCorrectly,
-      AnsweredWrongly
-    };
-
+   
     // Contructors and destructors.
     explicit SampleItem(QWidget *parent = 0);
     virtual ~SampleItem();
@@ -66,30 +61,29 @@ class SampleItem : public QWidget {
 
     /// \brief Access to state of sample question widget.
     /// \return Returns the state of sample question widget.
-    State state() const;
 
   public slots:
     /// \brief Resets widget for the question to its original/default state.
-    void reset();
+    
 
   signals:
     /// \brief Emitted if users clicks "Next" or "Submit"
-    void questionSubmitted();
+    void questionReadedNext();
+	void questionReadedPrevious();
+	
 
   private slots:
     void onNextClicked();
-    void onSubmitClicked();
+    void onPreviousClicked();
 
   private:
-    void setupButtons();
     void createConnections();
-    void clearStylesheets();
+  
 
   private:
-    State m_state;
     Ui::SampleItem *m_ui;
     SampleQuestion m_question;
-    QList<QRadioButton*> m_answerButtons;
+   
 };
 
-#endif // QUIZITEM_H
+#endif // SAMPLEITEM_H

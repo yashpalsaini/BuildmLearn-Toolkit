@@ -115,52 +115,29 @@ void SampleSimulator::start() {
   m_ui->m_phoneWidget->setCurrentIndex(2);
 }
 
-void SampleSimulator::prepareSummary() {
-  int answered_correctly = 0;
-  int answered_wrongly = 0;
-  int unanswered = 0;
 
-  for (int i = 2; i < m_ui->m_phoneWidget->count() - 1; i++) {
-    SampleItem *widget = static_cast<SampleItem*>(m_ui->m_phoneWidget->widget(i));
 
-    switch (widget->state()) {
-      case SampleItem::AnsweredCorrectly:
-        answered_correctly++;
-        break;
-
-      case SampleItem::AnsweredWrongly:
-        answered_wrongly++;
-        break;
-
-      case SampleItem::Unanswered:
-      default:
-        unanswered++;
-        break;
-    }
-  }
-
-  m_ui->m_lblTotalCorrect->setText(tr("Total correct %1").arg(answered_correctly));
-  m_ui->m_lblTotalWrong->setText(tr("Total wrong %1").arg(answered_wrongly));
-  m_ui->m_lblTotalUnanswered->setText(tr("Total unanswered %1").arg(unanswered));
-}
-
-void SampleSimulator::questionSubmitted() {
+void SampleSimulator::questionReadedNext() {
   int current_index = m_ui->m_phoneWidget->currentIndex();
 
-  if (current_index == m_ui->m_phoneWidget->count() - 2) {
-    // This is the last confirmed question. Go to "summary".
-    prepareSummary();
-  }
 
   m_ui->m_phoneWidget->setCurrentIndex(current_index + 1);
 }
 
-void SampleSimulator::restart() {
-  // Reset all the questions.
-  for (int i = 2; i < m_ui->m_phoneWidget->count() - 1; i++) {
-    static_cast<SampleItem*>(m_ui->m_phoneWidget->widget(i))->reset();
+void SampleSimulator::questionReadedPrevious() {
+  int current_index = m_ui->m_phoneWidget->currentIndex();
+
+  if (current_index == 2) {
+    // This is the first question. So remain on it .
+	  m_ui->m_phoneWidget->setCurrentIndex(2);
   }
 
+  m_ui->m_phoneWidget->setCurrentIndex(current_index -1);
+}
+
+
+
+void SampleSimulator::restart() {  
   m_ui->m_phoneWidget->setCurrentIndex(1);
 }
 

@@ -1,8 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<ui version="4.0">
+<ui version="4.0" >
  <class>SampleItem</class>
- <widget class="QWidget" name="QuizItem">
-  <property name="geometry">
+ <widget class="QWidget" name="SampleItem" >
+  <property name="geometry" >
    <rect>
     <x>0</x>
     <y>0</y>
@@ -10,94 +9,73 @@
     <height>329</height>
    </rect>
   </property>
-  <property name="windowTitle">
+  <property name="windowTitle" >
    <string>Form</string>
   </property>
-  <layout class="QVBoxLayout" name="verticalLayout">
-   <item>
-    <widget class="QLabel" name="m_lblQuestionNumber">
-     <property name="text">
+  <layout class="QGridLayout" >
+   <item row="0" column="0" >
+    <widget class="QLabel" name="m_lblQuestionNumber" >
+     <property name="text" >
       <string>Question number</string>
      </property>
     </widget>
    </item>
-   <item>
-    <widget class="Line" name="line">
-     <property name="orientation">
+   <item row="1" column="0" >
+    <widget class="Line" name="line" >
+     <property name="orientation" >
       <enum>Qt::Horizontal</enum>
      </property>
     </widget>
    </item>
-   <item>
-    <widget class="QLabel" name="m_lblQuestionText">
-     <property name="text">
+   <item row="2" column="0" >
+    <widget class="QLabel" name="m_lblQuestionText" >
+     <property name="text" >
       <string>Question text</string>
      </property>
     </widget>
    </item>
-   <item>
-    <widget class="QRadioButton" name="m_rbAnswerOne">
-     <property name="text">
-      <string>Answer one</string>
+   <item row="3" column="0" >
+    <widget class="QLabel" name="m_lblAnswerText" >
+     <property name="text" >
+      <string>Answer text</string>
      </property>
     </widget>
    </item>
-   <item>
-    <widget class="QRadioButton" name="m_rbAnswerTwo">
-     <property name="text">
-      <string>Answer two</string>
-     </property>
-    </widget>
-   </item>
-   <item>
-    <widget class="QRadioButton" name="m_rbAnswerThree">
-     <property name="text">
-      <string>Answer three</string>
-     </property>
-    </widget>
-   </item>
-   <item>
-    <widget class="QRadioButton" name="m_rbAnswerFour">
-     <property name="text">
-      <string>Answer four</string>
-     </property>
-    </widget>
-   </item>
-   <item>
-    <spacer name="verticalSpacer">
-     <property name="orientation">
+   <item row="4" column="0" >
+    <spacer>
+     <property name="orientation" >
       <enum>Qt::Vertical</enum>
      </property>
-     <property name="sizeHint" stdset="0">
+     <property name="sizeHint" >
       <size>
-       <width>20</width>
-       <height>40</height>
+       <width>265</width>
+       <height>71</height>
       </size>
      </property>
     </spacer>
    </item>
-   <item>
-    <widget class="QLabel" name="m_lblWarning">
-     <property name="text">
+   <item row="5" column="0" >
+    <widget class="QLabel" name="m_lblWarning" >
+     <property name="text" >
       <string/>
      </property>
-     <property name="alignment">
+     <property name="alignment" >
       <set>Qt::AlignCenter</set>
      </property>
     </widget>
    </item>
-   <item>
-    <layout class="QHBoxLayout" name="horizontalLayout">
+   <item row="6" column="0" >
+    <layout class="QHBoxLayout" >
      <item>
-      <widget class="QPushButton" name="m_btnNext">
-       <property name="text">
+      <widget class="QPushButton" name="m_btnNext" >
+       <property name="text" >
         <string>&amp;Next</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="m_btnConfirm">
-       <property name="text">
+      <widget class="QPushButton" name="m_btnPrevious" >
+       <property name="text" >
         <string>&amp;Submit</string>
        </property>
       </widget>

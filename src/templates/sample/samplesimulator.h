@@ -65,11 +65,11 @@ class SampleSimulator : public TemplateSimulator {
     void restart();
     void exit();
 
-    void prepareSummary();
-    void questionSubmitted();
+    void questionReadedNext();
+	 void questionReadedPrevious();
 
   private:
     Ui::SampleSimulator *m_ui;
 };
 
-#endif // QUIZSIMULATOR_H
+#endif // SAMPLESIMULATOR_H

@@ -29,166 +29,142 @@ QT_BEGIN_NAMESPACE
 class Ui_SampleSimulator
 {
 public:
-    QHBoxLayout *horizontalLayout;
+    QHBoxLayout *hboxLayout;
     QStackedWidget *m_phoneWidget;
     QWidget *m_pageStopped;
-    QHBoxLayout *horizontalLayout_3;
+    QHBoxLayout *hboxLayout1;
     QLabel *m_lblHeading_2;
     QWidget *m_pageWelcome;
-    QVBoxLayout *verticalLayout_2;
-    QSpacerItem *verticalSpacer_2;
+    QVBoxLayout *vboxLayout;
+    QSpacerItem *spacerItem;
     QLabel *m_lblHeading;
     QFrame *line_2;
     QLabel *m_lblAuthor;
-    QSpacerItem *verticalSpacer_3;
-    QHBoxLayout *horizontalLayout_2;
-    QSpacerItem *horizontalSpacer_3;
+    QSpacerItem *spacerItem1;
+    QHBoxLayout *hboxLayout2;
+    QSpacerItem *spacerItem2;
     QPushButton *m_btnStart;
-    QSpacerItem *horizontalSpacer_4;
+    QSpacerItem *spacerItem3;
     QWidget *m_pageFinish;
-    QVBoxLayout *verticalLayout;
+    QVBoxLayout *vboxLayout1;
     QLabel *label;
     QFrame *line;
-    QLabel *m_lblTotalCorrect;
-    QLabel *m_lblTotalWrong;
-    QLabel *m_lblTotalUnanswered;
-    QSpacerItem *verticalSpacer;
+    QSpacerItem *spacerItem4;
     QGridLayout *gridLayout;
-    QSpacerItem *horizontalSpacer_2;
+    QSpacerItem *spacerItem5;
     QPushButton *m_btnExit;
-    QSpacerItem *horizontalSpacer;
+    QSpacerItem *spacerItem6;
     QPushButton *m_btnRestart;
 
-    void setupUi(QWidget *QuizSimulator)
+    void setupUi(QWidget *SampleSimulator)
     {
-        if (QuizSimulator->objectName().isEmpty())
-            QuizSimulator->setObjectName(QStringLiteral("QuizSimulator"));
-        QuizSimulator->resize(319, 339);
-        horizontalLayout = new QHBoxLayout(QuizSimulator);
-        horizontalLayout->setSpacing(0);
-        horizontalLayout->setContentsMargins(0, 0, 0, 0);
-        horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
-        m_phoneWidget = new QStackedWidget(QuizSimulator);
+        if (SampleSimulator->objectName().isEmpty())
+            SampleSimulator->setObjectName(QStringLiteral("SampleSimulator"));
+        SampleSimulator->resize(378, 339);
+        hboxLayout = new QHBoxLayout(SampleSimulator);
+        hboxLayout->setSpacing(0);
+        hboxLayout->setObjectName(QStringLiteral("hboxLayout"));
+        hboxLayout->setContentsMargins(0, 0, 0, 0);
+        m_phoneWidget = new QStackedWidget(SampleSimulator);
         m_phoneWidget->setObjectName(QStringLiteral("m_phoneWidget"));
         m_pageStopped = new QWidget();
         m_pageStopped->setObjectName(QStringLiteral("m_pageStopped"));
-        horizontalLayout_3 = new QHBoxLayout(m_pageStopped);
-        horizontalLayout_3->setContentsMargins(0, 0, 0, 0);
-        horizontalLayout_3->setObjectName(QStringLiteral("horizontalLayout_3"));
+        hboxLayout1 = new QHBoxLayout(m_pageStopped);
+        hboxLayout1->setObjectName(QStringLiteral("hboxLayout1"));
+        hboxLayout1->setContentsMargins(0, 0, 0, 0);
         m_lblHeading_2 = new QLabel(m_pageStopped);
         m_lblHeading_2->setObjectName(QStringLiteral("m_lblHeading_2"));
-        m_lblHeading_2->setText(QStringLiteral("<span style=\" font-size:18pt;\">Sample</span>"));
         m_lblHeading_2->setAlignment(Qt::AlignCenter);
 
-        horizontalLayout_3->addWidget(m_lblHeading_2);
+        hboxLayout1->addWidget(m_lblHeading_2);
 
         m_phoneWidget->addWidget(m_pageStopped);
         m_pageWelcome = new QWidget();
         m_pageWelcome->setObjectName(QStringLiteral("m_pageWelcome"));
-        verticalLayout_2 = new QVBoxLayout(m_pageWelcome);
-        verticalLayout_2->setObjectName(QStringLiteral("verticalLayout_2"));
-        verticalSpacer_2 = new QSpacerItem(20, 116, QSizePolicy::Minimum, QSizePolicy::Expanding);
+        vboxLayout = new QVBoxLayout(m_pageWelcome);
+        vboxLayout->setObjectName(QStringLiteral("vboxLayout"));
+        spacerItem = new QSpacerItem(20, 116, QSizePolicy::Minimum, QSizePolicy::Expanding);
 
-        verticalLayout_2->addItem(verticalSpacer_2);
+        vboxLayout->addItem(spacerItem);
 
         m_lblHeading = new QLabel(m_pageWelcome);
         m_lblHeading->setObjectName(QStringLiteral("m_lblHeading"));
-        m_lblHeading->setText(QStringLiteral("Heading"));
         m_lblHeading->setAlignment(Qt::AlignCenter);
 
-        verticalLayout_2->addWidget(m_lblHeading);
+        vboxLayout->addWidget(m_lblHeading);
 
         line_2 = new QFrame(m_pageWelcome);
         line_2->setObjectName(QStringLiteral("line_2"));
         line_2->setFrameShape(QFrame::HLine);
         line_2->setFrameShadow(QFrame::Sunken);
 
-        verticalLayout_2->addWidget(line_2);
+        vboxLayout->addWidget(line_2);
 
         m_lblAuthor = new QLabel(m_pageWelcome);
         m_lblAuthor->setObjectName(QStringLiteral("m_lblAuthor"));
-        m_lblAuthor->setText(QStringLiteral("Author"));
         m_lblAuthor->setAlignment(Qt::AlignCenter);
 
-        verticalLayout_2->addWidget(m_lblAuthor);
+        vboxLayout->addWidget(m_lblAuthor);
 
-        verticalSpacer_3 = new QSpacerItem(20, 115, QSizePolicy::Minimum, QSizePolicy::Expanding);
+        spacerItem1 = new QSpacerItem(20, 115, QSizePolicy::Minimum, QSizePolicy::Expanding);
 
-        verticalLayout_2->addItem(verticalSpacer_3);
+        vboxLayout->addItem(spacerItem1);
 
-        horizontalLayout_2 = new QHBoxLayout();
-        horizontalLayout_2->setObjectName(QStringLiteral("horizontalLayout_2"));
-        horizontalSpacer_3 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+        hboxLayout2 = new QHBoxLayout();
+        hboxLayout2->setObjectName(QStringLiteral("hboxLayout2"));
+        spacerItem2 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
-        horizontalLayout_2->addItem(horizontalSpacer_3);
+        hboxLayout2->addItem(spacerItem2);
 
         m_btnStart = new QPushButton(m_pageWelcome);
         m_btnStart->setObjectName(QStringLiteral("m_btnStart"));
         m_btnStart->setEnabled(false);
 
-        horizontalLayout_2->addWidget(m_btnStart);
+        hboxLayout2->addWidget(m_btnStart);
 
-        horizontalSpacer_4 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+        spacerItem3 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
-        horizontalLayout_2->addItem(horizontalSpacer_4);
+        hboxLayout2->addItem(spacerItem3);
 
 
-        verticalLayout_2->addLayout(horizontalLayout_2);
+        vboxLayout->addLayout(hboxLayout2);
 
         m_phoneWidget->addWidget(m_pageWelcome);
         m_pageFinish = new QWidget();
         m_pageFinish->setObjectName(QStringLiteral("m_pageFinish"));
-        verticalLayout = new QVBoxLayout(m_pageFinish);
-        verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
+        vboxLayout1 = new QVBoxLayout(m_pageFinish);
+        vboxLayout1->setObjectName(QStringLiteral("vboxLayout1"));
         label = new QLabel(m_pageFinish);
         label->setObjectName(QStringLiteral("label"));
         label->setAlignment(Qt::AlignCenter);
 
-        verticalLayout->addWidget(label);
+        vboxLayout1->addWidget(label);
 
         line = new QFrame(m_pageFinish);
         line->setObjectName(QStringLiteral("line"));
         line->setFrameShape(QFrame::HLine);
         line->setFrameShadow(QFrame::Sunken);
 
-        verticalLayout->addWidget(line);
+        vboxLayout1->addWidget(line);
 
-        m_lblTotalCorrect = new QLabel(m_pageFinish);
-        m_lblTotalCorrect->setObjectName(QStringLiteral("m_lblTotalCorrect"));
-        m_lblTotalCorrect->setAlignment(Qt::AlignCenter);
+        spacerItem4 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
 
-        verticalLayout->addWidget(m_lblTotalCorrect);
-
-        m_lblTotalWrong = new QLabel(m_pageFinish);
-        m_lblTotalWrong->setObjectName(QStringLiteral("m_lblTotalWrong"));
-        m_lblTotalWrong->setAlignment(Qt::AlignCenter);
-
-        verticalLayout->addWidget(m_lblTotalWrong);
-
-        m_lblTotalUnanswered = new QLabel(m_pageFinish);
-        m_lblTotalUnanswered->setObjectName(QStringLiteral("m_lblTotalUnanswered"));
-        m_lblTotalUnanswered->setAlignment(Qt::AlignCenter);
-
-        verticalLayout->addWidget(m_lblTotalUnanswered);
-
-        verticalSpacer = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
-
-        verticalLayout->addItem(verticalSpacer);
+        vboxLayout1->addItem(spacerItem4);
 
         gridLayout = new QGridLayout();
         gridLayout->setObjectName(QStringLiteral("gridLayout"));
-        horizontalSpacer_2 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+        spacerItem5 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
-        gridLayout->addItem(horizontalSpacer_2, 0, 2, 2, 1);
+        gridLayout->addItem(spacerItem5, 0, 2, 2, 1);
 
         m_btnExit = new QPushButton(m_pageFinish);
         m_btnExit->setObjectName(QStringLiteral("m_btnExit"));
 
         gridLayout->addWidget(m_btnExit, 1, 1, 1, 1);
 
-        horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+        spacerItem6 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
-        gridLayout->addItem(horizontalSpacer, 0, 0, 2, 1);
+        gridLayout->addItem(spacerItem6, 0, 0, 2, 1);
 
         m_btnRestart = new QPushButton(m_pageFinish);
         m_btnRestart->setObjectName(QStringLiteral("m_btnRestart"));
@@ -196,29 +172,29 @@ public:
         gridLayout->addWidget(m_btnRestart, 0, 1, 1, 1);
 
 
-        verticalLayout->addLayout(gridLayout);
+        vboxLayout1->addLayout(gridLayout);
 
         m_phoneWidget->addWidget(m_pageFinish);
 
-        horizontalLayout->addWidget(m_phoneWidget);
+        hboxLayout->addWidget(m_phoneWidget);
 
 
-        retranslateUi(QuizSimulator);
+        retranslateUi(SampleSimulator);
 
         m_phoneWidget->setCurrentIndex(0);
 
 
-        QMetaObject::connectSlotsByName(QuizSimulator);
+        QMetaObject::connectSlotsByName(SampleSimulator);
     } // setupUi
 
-    void retranslateUi(QWidget *QuizSimulator)
+    void retranslateUi(QWidget *SampleSimulator)
     {
-        QuizSimulator->setWindowTitle(QApplication::translate("SampleSimulator", "Form", 0));
+        SampleSimulator->setWindowTitle(QApplication::translate("SampleSimulator", "Form", 0));
+        m_lblHeading_2->setText(QApplication::translate("SampleSimulator", "<span style=\" font-size:18pt;\">Sample Question Answer</span>", 0));
+        m_lblHeading->setText(QApplication::translate("SampleSimulator", "Heading", 0));
+        m_lblAuthor->setText(QApplication::translate("SampleSimulator", "Author", 0));
         m_btnStart->setText(QApplication::translate("SampleSimulator", "&Start", 0));
         label->setText(QApplication::translate("SampleSimulator", "You have completed the sample", 0));
-        m_lblTotalCorrect->setText(QApplication::translate("SampleSimulator", "Total correct: %1", 0));
-        m_lblTotalWrong->setText(QApplication::translate("SampleSimulator", "Total wrong: %1", 0));
-        m_lblTotalUnanswered->setText(QApplication::translate("SampleSimulator", "Total unanswered: %1", 0));
         m_btnExit->setText(QApplication::translate("SampleSimulator", "&Exit", 0));
         m_btnRestart->setText(QApplication::translate("SampleSimulator", "&Restart", 0));
     } // retranslateUi

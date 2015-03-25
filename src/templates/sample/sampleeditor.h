@@ -72,8 +72,7 @@ class SampleEditor : public TemplateEditor {
 
   private slots:
     void updateQuestionCount();
-    void addQuestion(const QString &question, const QStringList &answers, int correct_answer);
-    void addQuestion();
+    void addQuestion(const QString &question, const QString &answer);
     void loadQuestion(int index);
     void removeQuestion();
     void saveQuestion();
@@ -96,4 +95,4 @@ class SampleEditor : public TemplateEditor {
     QIcon m_iconNo;
 };
 
-#endif // QUIZEDITOR_H
+#endif // SAMPLEEDITOR_H

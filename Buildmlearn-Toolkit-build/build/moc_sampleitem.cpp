@@ -20,7 +20,7 @@
 QT_BEGIN_MOC_NAMESPACE
 struct qt_meta_stringdata_SampleItem_t {
     QByteArrayData data[6];
-    char stringdata[66];
+    char stringdata[86];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -30,15 +30,16 @@ struct qt_meta_stringdata_SampleItem_t {
 static const qt_meta_stringdata_SampleItem_t qt_meta_stringdata_SampleItem = {
     {
 QT_MOC_LITERAL(0, 0, 10), // "SampleItem"
-QT_MOC_LITERAL(1, 11, 17), // "questionSubmitted"
-QT_MOC_LITERAL(2, 29, 0), // ""
-QT_MOC_LITERAL(3, 30, 5), // "reset"
-QT_MOC_LITERAL(4, 36, 13), // "onNextClicked"
-QT_MOC_LITERAL(5, 50, 15) // "onSubmitClicked"
+QT_MOC_LITERAL(1, 11, 18), // "questionReadedNext"
+QT_MOC_LITERAL(2, 30, 0), // ""
+QT_MOC_LITERAL(3, 31, 22), // "questionReadedPrevious"
+QT_MOC_LITERAL(4, 54, 13), // "onNextClicked"
+QT_MOC_LITERAL(5, 68, 17) // "onPreviousClicked"
 
     },
-    "SampleItem\0questionSubmitted\0\0reset\0"
-    "onNextClicked\0onSubmitClicked"
+    "SampleItem\0questionReadedNext\0\0"
+    "questionReadedPrevious\0onNextClicked\0"
+    "onPreviousClicked"
 };
 #undef QT_MOC_LITERAL
 
@@ -53,21 +54,21 @@ static const uint qt_meta_data_SampleItem[] = {
        0,    0, // enums/sets
        0,    0, // constructors
        0,       // flags
-       1,       // signalCount
+       2,       // signalCount
 
  // signals: name, argc, parameters, tag, flags
        1,    0,   34,    2, 0x06 /* Public */,
+       3,    0,   35,    2, 0x06 /* Public */,
 
  // slots: name, argc, parameters, tag, flags
-       3,    0,   35,    2, 0x0a /* Public */,
        4,    0,   36,    2, 0x08 /* Private */,
        5,    0,   37,    2, 0x08 /* Private */,
 
  // signals: parameters
     QMetaType::Void,
+    QMetaType::Void,
 
  // slots: parameters
-    QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
 
@@ -79,10 +80,10 @@ void SampleItem::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
     if (_c == QMetaObject::InvokeMetaMethod) {
         SampleItem *_t = static_cast<SampleItem *>(_o);
         switch (_id) {
-        case 0: _t->questionSubmitted(); break;
-        case 1: _t->reset(); break;
+        case 0: _t->questionReadedNext(); break;
+        case 1: _t->questionReadedPrevious(); break;
         case 2: _t->onNextClicked(); break;
-        case 3: _t->onSubmitClicked(); break;
+        case 3: _t->onPreviousClicked(); break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
@@ -90,8 +91,14 @@ void SampleItem::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         void **func = reinterpret_cast<void **>(_a[1]);
         {
             typedef void (SampleItem::*_t)();
-            if (*reinterpret_cast<_t *>(func) == static_cast<_t>(&SampleItem::questionSubmitted)) {
+            if (*reinterpret_cast<_t *>(func) == static_cast<_t>(&SampleItem::questionReadedNext)) {
                 *result = 0;
+            }
+        }
+        {
+            typedef void (SampleItem::*_t)();
+            if (*reinterpret_cast<_t *>(func) == static_cast<_t>(&SampleItem::questionReadedPrevious)) {
+                *result = 1;
             }
         }
     }
@@ -135,8 +142,14 @@ int SampleItem::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 }
 
 // SIGNAL 0
-void SampleItem::questionSubmitted()
+void SampleItem::questionReadedNext()
 {
     QMetaObject::activate(this, &staticMetaObject, 0, Q_NULLPTR);
+}
+
+// SIGNAL 1
+void SampleItem::questionReadedPrevious()
+{
+    QMetaObject::activate(this, &staticMetaObject, 1, Q_NULLPTR);
 }
 QT_END_MOC_NAMESPACE

@@ -14,13 +14,12 @@
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QButtonGroup>
 #include <QtWidgets/QFrame>
+#include <QtWidgets/QGridLayout>
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QPushButton>
-#include <QtWidgets/QRadioButton>
 #include <QtWidgets/QSpacerItem>
-#include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -28,107 +27,86 @@ QT_BEGIN_NAMESPACE
 class Ui_SampleItem
 {
 public:
-    QVBoxLayout *verticalLayout;
+    QGridLayout *gridLayout;
     QLabel *m_lblQuestionNumber;
     QFrame *line;
     QLabel *m_lblQuestionText;
-    QRadioButton *m_rbAnswerOne;
-    QRadioButton *m_rbAnswerTwo;
-    QRadioButton *m_rbAnswerThree;
-    QRadioButton *m_rbAnswerFour;
-    QSpacerItem *verticalSpacer;
+    QLabel *m_lblAnswerText;
+    QSpacerItem *spacerItem;
     QLabel *m_lblWarning;
-    QHBoxLayout *horizontalLayout;
+    QHBoxLayout *hboxLayout;
     QPushButton *m_btnNext;
-    QPushButton *m_btnConfirm;
+    QPushButton *m_btnPrevious;
 
-    void setupUi(QWidget *QuizItem)
+    void setupUi(QWidget *SampleItem)
     {
-        if (QuizItem->objectName().isEmpty())
-            QuizItem->setObjectName(QStringLiteral("QuizItem"));
-        QuizItem->resize(283, 329);
-        verticalLayout = new QVBoxLayout(QuizItem);
-        verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
-        m_lblQuestionNumber = new QLabel(QuizItem);
+        if (SampleItem->objectName().isEmpty())
+            SampleItem->setObjectName(QStringLiteral("SampleItem"));
+        SampleItem->resize(283, 329);
+        gridLayout = new QGridLayout(SampleItem);
+        gridLayout->setObjectName(QStringLiteral("gridLayout"));
+        m_lblQuestionNumber = new QLabel(SampleItem);
         m_lblQuestionNumber->setObjectName(QStringLiteral("m_lblQuestionNumber"));
 
-        verticalLayout->addWidget(m_lblQuestionNumber);
+        gridLayout->addWidget(m_lblQuestionNumber, 0, 0, 1, 1);
 
-        line = new QFrame(QuizItem);
+        line = new QFrame(SampleItem);
         line->setObjectName(QStringLiteral("line"));
         line->setFrameShape(QFrame::HLine);
         line->setFrameShadow(QFrame::Sunken);
 
-        verticalLayout->addWidget(line);
+        gridLayout->addWidget(line, 1, 0, 1, 1);
 
-        m_lblQuestionText = new QLabel(QuizItem);
+        m_lblQuestionText = new QLabel(SampleItem);
         m_lblQuestionText->setObjectName(QStringLiteral("m_lblQuestionText"));
 
-        verticalLayout->addWidget(m_lblQuestionText);
+        gridLayout->addWidget(m_lblQuestionText, 2, 0, 1, 1);
 
-        m_rbAnswerOne = new QRadioButton(QuizItem);
-        m_rbAnswerOne->setObjectName(QStringLiteral("m_rbAnswerOne"));
+        m_lblAnswerText = new QLabel(SampleItem);
+        m_lblAnswerText->setObjectName(QStringLiteral("m_lblAnswerText"));
 
-        verticalLayout->addWidget(m_rbAnswerOne);
+        gridLayout->addWidget(m_lblAnswerText, 3, 0, 1, 1);
 
-        m_rbAnswerTwo = new QRadioButton(QuizItem);
-        m_rbAnswerTwo->setObjectName(QStringLiteral("m_rbAnswerTwo"));
+        spacerItem = new QSpacerItem(265, 71, QSizePolicy::Minimum, QSizePolicy::Expanding);
 
-        verticalLayout->addWidget(m_rbAnswerTwo);
+        gridLayout->addItem(spacerItem, 4, 0, 1, 1);
 
-        m_rbAnswerThree = new QRadioButton(QuizItem);
-        m_rbAnswerThree->setObjectName(QStringLiteral("m_rbAnswerThree"));
-
-        verticalLayout->addWidget(m_rbAnswerThree);
-
-        m_rbAnswerFour = new QRadioButton(QuizItem);
-        m_rbAnswerFour->setObjectName(QStringLiteral("m_rbAnswerFour"));
-
-        verticalLayout->addWidget(m_rbAnswerFour);
-
-        verticalSpacer = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
-
-        verticalLayout->addItem(verticalSpacer);
-
-        m_lblWarning = new QLabel(QuizItem);
+        m_lblWarning = new QLabel(SampleItem);
         m_lblWarning->setObjectName(QStringLiteral("m_lblWarning"));
         m_lblWarning->setAlignment(Qt::AlignCenter);
 
-        verticalLayout->addWidget(m_lblWarning);
+        gridLayout->addWidget(m_lblWarning, 5, 0, 1, 1);
 
-        horizontalLayout = new QHBoxLayout();
-        horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
-        m_btnNext = new QPushButton(QuizItem);
+        hboxLayout = new QHBoxLayout();
+        hboxLayout->setObjectName(QStringLiteral("hboxLayout"));
+        m_btnNext = new QPushButton(SampleItem);
         m_btnNext->setObjectName(QStringLiteral("m_btnNext"));
 
-        horizontalLayout->addWidget(m_btnNext);
+        hboxLayout->addWidget(m_btnNext);
 
-        m_btnConfirm = new QPushButton(QuizItem);
-        m_btnConfirm->setObjectName(QStringLiteral("m_btnConfirm"));
+        m_btnPrevious = new QPushButton(SampleItem);
+        m_btnPrevious->setObjectName(QStringLiteral("m_btnPrevious"));
 
-        horizontalLayout->addWidget(m_btnConfirm);
-
-
-        verticalLayout->addLayout(horizontalLayout);
+        hboxLayout->addWidget(m_btnPrevious);
 
 
-        retranslateUi(QuizItem);
+        gridLayout->addLayout(hboxLayout, 6, 0, 1, 1);
 
-        QMetaObject::connectSlotsByName(QuizItem);
+
+        retranslateUi(SampleItem);
+
+        QMetaObject::connectSlotsByName(SampleItem);
     } // setupUi
 
-    void retranslateUi(QWidget *QuizItem)
+    void retranslateUi(QWidget *SampleItem)
     {
-        QuizItem->setWindowTitle(QApplication::translate("SampleItem", "Form", 0));
+        SampleItem->setWindowTitle(QApplication::translate("SampleItem", "Form", 0));
         m_lblQuestionNumber->setText(QApplication::translate("SampleItem", "Question number", 0));
         m_lblQuestionText->setText(QApplication::translate("SampleItem", "Question text", 0));
-        m_rbAnswerOne->setText(QApplication::translate("SampleItem", "Answer one", 0));
-        m_rbAnswerTwo->setText(QApplication::translate("SampleItem", "Answer two", 0));
-        m_rbAnswerThree->setText(QApplication::translate("SampleItem", "Answer three", 0));
-        m_rbAnswerFour->setText(QApplication::translate("SampleItem", "Answer four", 0));
+        m_lblAnswerText->setText(QApplication::translate("SampleItem", "Answer text", 0));
         m_lblWarning->setText(QString());
         m_btnNext->setText(QApplication::translate("SampleItem", "&Next", 0));
-        m_btnConfirm->setText(QApplication::translate("SampleItem", "&Submit", 0));
+        m_btnPrevious->setText(QApplication::translate("SampleItem", "&Submit", 0));
     } // retranslateUi
 
 };

@@ -47,24 +47,19 @@ class SampleQuestion {
     /// \return Returns index of correct answer.
     /// \warning Index is NOT numbered from 0. It is numbered from 1. So if first
     /// answer is correct, then index of correct answer is ONE.
-    int correctAnswer() const;
-    void setCorrectAnswer(int correctAnswer);
-
-    void setAnswer(int index, const QString &answer);
-    QString answerOne() const;
-    QString answerTwo() const;
-    QString answerThree() const;
-    QString answerFour() const;
+    
+	QString answer() const;
+	void setCorrectAnswer(const  QString &answer); 
 
     QString question() const;
     void setQuestion(const QString &question);
 
   private:
     QString m_question;
-    QStringList m_answers;
-    int m_correctAnswer;
+    QString m_answer;
+ 
 };
 
 Q_DECLARE_METATYPE(SampleQuestion)
 
-#endif // QUIZQUESTION_H
+#endif // SAMPLEQUESTION_H

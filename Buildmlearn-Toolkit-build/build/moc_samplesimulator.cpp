@@ -20,7 +20,7 @@
 QT_BEGIN_MOC_NAMESPACE
 struct qt_meta_stringdata_SampleSimulator_t {
     QByteArrayData data[10];
-    char stringdata[107];
+    char stringdata[116];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -37,13 +37,13 @@ QT_MOC_LITERAL(4, 48, 6), // "goBack"
 QT_MOC_LITERAL(5, 55, 5), // "start"
 QT_MOC_LITERAL(6, 61, 7), // "restart"
 QT_MOC_LITERAL(7, 69, 4), // "exit"
-QT_MOC_LITERAL(8, 74, 14), // "prepareSummary"
-QT_MOC_LITERAL(9, 89, 17) // "questionSubmitted"
+QT_MOC_LITERAL(8, 74, 18), // "questionReadedNext"
+QT_MOC_LITERAL(9, 93, 22) // "questionReadedPrevious"
 
     },
     "SampleSimulator\0startSimulation\0\0"
     "stopSimulation\0goBack\0start\0restart\0"
-    "exit\0prepareSummary\0questionSubmitted"
+    "exit\0questionReadedNext\0questionReadedPrevious"
 };
 #undef QT_MOC_LITERAL
 
@@ -97,8 +97,8 @@ void SampleSimulator::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int 
         case 3: _t->start(); break;
         case 4: _t->restart(); break;
         case 5: _t->exit(); break;
-        case 6: _t->prepareSummary(); break;
-        case 7: _t->questionSubmitted(); break;
+        case 6: _t->questionReadedNext(); break;
+        case 7: _t->questionReadedPrevious(); break;
         default: ;
         }
     }

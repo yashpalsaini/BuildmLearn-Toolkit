@@ -33,14 +33,14 @@
 #include "definitions/definitions.h"
 
 
-SampleItem::SampleItem(QWidget *parent) : QWidget(parent), m_state(Unanswered), m_ui(new Ui::SampleItem) {
+SampleItem::SampleItem(QWidget *parent) : QWidget(parent), m_ui(new Ui::SampleItem) {
   m_ui->setupUi(this);
 
   QFont caption_font = m_ui->m_lblQuestionNumber->font();
   caption_font.setPointSize(caption_font.pointSize() + SIMULATOR_HEADER_SIZE_INCREASE);
   m_ui->m_lblQuestionNumber->setFont(caption_font);
 
-  setupButtons();
+
   createConnections();
 }
 
@@ -48,108 +48,31 @@ SampleItem::~SampleItem() {
   delete m_ui;
 }
 
-void SampleItem::setupButtons() {
-  m_answerButtons = QList<QRadioButton*>();
-  m_answerButtons.append(m_ui->m_rbAnswerOne);
-  m_answerButtons.append(m_ui->m_rbAnswerTwo);
-  m_answerButtons.append(m_ui->m_rbAnswerThree);
-  m_answerButtons.append(m_ui->m_rbAnswerFour);
-}
 
 void SampleItem::createConnections() {
   connect(m_ui->m_btnNext, SIGNAL(clicked()), this, SLOT(onNextClicked()));
-  connect(m_ui->m_btnConfirm, SIGNAL(clicked()), this, SLOT(onSubmitClicked()));
-  connect(m_ui->m_rbAnswerOne, SIGNAL(toggled(bool)), m_ui->m_lblWarning, SLOT(hide()));
-  connect(m_ui->m_rbAnswerTwo, SIGNAL(toggled(bool)), m_ui->m_lblWarning, SLOT(hide()));
-  connect(m_ui->m_rbAnswerThree, SIGNAL(toggled(bool)), m_ui->m_lblWarning, SLOT(hide()));
-  connect(m_ui->m_rbAnswerFour, SIGNAL(toggled(bool)), m_ui->m_lblWarning, SLOT(hide()));
+  connect(m_ui->m_btnPrevious, SIGNAL(clicked()), this, SLOT(onPreviousClicked()));
+ 
 }
 
-void SampleItem::clearStylesheets() {
-  foreach (QRadioButton *answer_button, m_answerButtons) {
-    answer_button->setStyleSheet(QString());
-  }
-}
 
 void SampleItem::setQuestion(const SampleQuestion &question, int question_number, int total_questions) {
   m_question = question;
-
-  m_ui->m_rbAnswerOne->setText(question.answerOne());
-  m_ui->m_rbAnswerTwo->setText(question.answerTwo());
-  m_ui->m_rbAnswerThree->setText(question.answerThree());
-  m_ui->m_rbAnswerFour->setText(question.answerFour());
-
-  m_ui->m_rbAnswerOne->setVisible(question.correctAnswer() == 0 || !question.answerOne().simplified().isEmpty());
-  m_ui->m_rbAnswerTwo->setVisible(question.correctAnswer() == 1 || !question.answerTwo().simplified().isEmpty());
-  m_ui->m_rbAnswerThree->setVisible(question.correctAnswer() == 2 || !question.answerThree().simplified().isEmpty());
-  m_ui->m_rbAnswerFour->setVisible(question.correctAnswer() == 3 || !question.answerFour().simplified().isEmpty());
-
+ 
   m_ui->m_lblQuestionNumber->setText(tr("Question number %1 of %2").arg(QString::number(question_number),
                                                                         QString::number(total_questions)));
   m_ui->m_lblQuestionText->setText(question.question());
+  m_ui->m_lblAnswerText->setText(question.answer());
+  
 }
 
-SampleItem::State SampleItem::state() const {
-  return m_state;
-}
-
-void SampleItem::reset() {
-  clearStylesheets();
-
-  foreach (QRadioButton *answer_button, m_answerButtons) {
-    // Hacky way to really force all radio buttons to be unchecked.
-    answer_button->setEnabled(false);
-    answer_button->setCheckable(false);
-    answer_button->setChecked(false);
-    answer_button->setEnabled(true);
-    answer_button->setCheckable(true);
-  }
-
-  m_ui->m_lblWarning->setVisible(false);
-  m_ui->m_btnConfirm->setEnabled(true);
-  m_state = Unanswered;
-}
 
 void SampleItem::onNextClicked() {
-  // Just signal that user is done with this question.
-  emit questionSubmitted();
+  // Just signal that user is done with this question and wants to go for next.
+  emit questionReadedNext();
 }
 
-void SampleItem::onSubmitClicked() {
-  // Check if user selected any answer, if he did not, then remind him it.
-  if (!m_ui->m_rbAnswerOne->isChecked() && !m_ui->m_rbAnswerTwo->isChecked() &&
-      !m_ui->m_rbAnswerThree->isChecked() && !m_ui->m_rbAnswerFour->isChecked()) {
-    // No answer seems to be selected.
-    m_ui->m_lblWarning->setText("Select some answer, please.");
-    m_ui->m_lblWarning->setVisible(true);
-  }
-  else {
-    int selected_answer = 0;
-
-    // User selected some answer, highlight correct and incorrect answer.
-    for (int i = 0; i < m_answerButtons.size(); i++) {
-      if (m_answerButtons.at(i)->isChecked()) {
-        selected_answer = i;
-      }
-    }
-
-    if (selected_answer == m_question.correctAnswer()) {
-      m_ui->m_lblWarning->setText("That is correct answer.");
-      m_answerButtons.at(selected_answer)->setStyleSheet("background-color: green;");
-      m_state = AnsweredCorrectly;
-    }
-    else {
-      m_ui->m_lblWarning->setText("That is wrong answer.");
-      m_answerButtons.at(selected_answer)->setStyleSheet("background-color: red;");
-      m_answerButtons.at(m_question.correctAnswer())->setStyleSheet("background-color: green;");
-      m_state = AnsweredWrongly;
-    }
-
-    foreach (QRadioButton *button, m_answerButtons) {
-      button->setEnabled(false);
-    }
-
-    m_ui->m_btnConfirm->setEnabled(false);
-    m_ui->m_lblWarning->setVisible(true);
-  }
+void SampleItem::onPreviousClicked() {
+  // Just signal that user is done with this question wants to go for previous.
+  emit questionReadedPrevious();
 }

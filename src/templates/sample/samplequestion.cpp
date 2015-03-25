@@ -34,47 +34,26 @@
 
 
 SampleQuestion::SampleQuestion() {
-  m_answers = QStringList();
-  m_answers << QString() << QString() << QString() << QString();
+ 
 }
 
 SampleQuestion::~SampleQuestion() {
-}
-
-int SampleQuestion::correctAnswer() const {
-  return m_correctAnswer;
-}
-
-void SampleQuestion::setCorrectAnswer(int correctAnswer) {
-  m_correctAnswer = correctAnswer;
-}
-
-void SampleQuestion::setAnswer(int index, const QString &answer) {
-  if (index >= 0 && index < 4) {
-    m_answers.replace(index, answer);
-  }
-}
-
-QString SampleQuestion::answerOne() const {
-  return m_answers.at(0);
-}
-
-QString SampleQuestion::answerTwo() const {
-  return m_answers.at(1);
-}
-
-QString SampleQuestion::answerThree() const {
-  return m_answers.at(2);
-}
-
-QString SampleQuestion::answerFour() const {
-  return m_answers.at(3);
 }
 
 QString SampleQuestion::question() const {
   return m_question;
 }
 
+QString SampleQuestion::answer() const {
+  return m_answer;
+}
+
+
 void SampleQuestion::setQuestion(const QString &question) {
   m_question = question;
 }
+
+void SampleQuestion::setCorrectAnswer(const QString &answer) {
+  m_answer = answer;
+}
+
